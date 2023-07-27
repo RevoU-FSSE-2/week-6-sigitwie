@@ -176,6 +176,8 @@ The `docker build` command is used to build a Docker image from a Dockerfile. Le
 
 - `.`: The period (`.`) at the end of the command specifies the build context. It tells Docker to look for the Dockerfile in the current directory where the command is being executed.
 
+![image](/img/build.png)
+
 
 **3. Run the Container**
 
