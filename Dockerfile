@@ -1,20 +1,20 @@
-# Gunakan Node.js sebagai base image
-FROM node:14
+   # Use Node.js as the base image
+   FROM node:14
 
-# Buat direktori kerja di dalam container
-WORKDIR /usr/src/app
+   # Set the working directory inside the container
+   WORKDIR /usr/src/app
 
-# Salin package.json dan package-lock.json ke dalam container
-COPY package*.json ./
+   # Copy package.json and package-lock.json into the container
+   COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+   # Install dependencies
+   RUN npm install
 
-# Salin seluruh kode aplikasi ke dalam container
-COPY . .
+   # Copy the entire application code into the container
+   COPY . .
 
-# Tentukan port yang akan digunakan oleh aplikasi
-EXPOSE 3001
+   # Specify the port that the application will use
+   EXPOSE 3001
 
-# Jalankan aplikasi ketika container dijalankan
-CMD ["node", "app.js"]
+   # Run the application when the container is launched
+   CMD ["node", "app.js"]
